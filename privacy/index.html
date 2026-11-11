@@ -47,7 +47,7 @@
 <body>
 <main>
   <h1>ApagApp Privacy Policy</h1>
-  <p class="meta">Effective November 4, 2026 · Last updated November 4, 2026</p>
+  <p class="meta">Effective November 4, 2026 · Last updated November 10, 2026</p>
 
   <p>ApagApp is an iPhone app for reviewing and cleaning up your photo library. It is developed and published by Victor Rocha, an individual developer ("we", "us"). This policy explains what happens to your photos and information when you use ApagApp.</p>
 
@@ -55,7 +55,7 @@
     <p><strong>The short version</strong></p>
     <ul>
       <li>ApagApp does not collect any personal data. Nothing about you or your photos is sent to us.</li>
-      <li>Your photos never leave your device. ApagApp has no servers and makes no network requests of its own.</li>
+      <li>Your photos never leave your device. ApagApp has no servers. The only request it makes is an optional place-name lookup to Apple, which is off unless you turn it on.</li>
       <li>There are no accounts, no analytics, no advertising and no tracking.</li>
       <li>Purchases are handled entirely by Apple.</li>
     </ul>
@@ -64,7 +64,8 @@
   <h2>1. Your photo library</h2>
   <p>ApagApp asks for access to your photo library so it can show you your photos and videos, let you mark favorites, and delete the items you choose. All of this happens on your device, through Apple's Photos framework.</p>
   <ul>
-    <li>We never upload, copy, analyze on a server, or share your photos, videos or their details (such as dates, locations or file sizes).</li>
+    <li>We never upload, copy, analyze on a server, or share your photos, videos or their details (such as dates, locations or file sizes), except for the optional place names described below.</li>
+    <li><strong>Place names (optional):</strong> if you turn on "Show Places" in Settings, ApagApp sends the location stored in a photo (its coordinates, never the photo itself) to Apple's geocoding service to show the town where it was taken. This is off by default, and the request goes to Apple, not to us. It is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
     <li>When you confirm a deletion, iOS asks you to approve it and moves the items to the Recently Deleted album in the Photos app. iOS keeps them there for a limited time, usually up to 30 days, before removing them permanently. You can recover them from Recently Deleted during that time.</li>
     <li>If your library is synced with iCloud Photos, changes you make in ApagApp, including deletions and favorites, apply across your devices, as they would in the Photos app. That sync is provided by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
     <li>You can change or revoke ApagApp's access at any time in Settings &gt; Privacy &amp; Security &gt; Photos.</li>
@@ -76,9 +77,10 @@
     <li><strong>Review progress:</strong> which photos and folders you have already reviewed, and an in-progress review you can resume later. The saved review is encrypted with a key that is kept in your device's Secure Enclave.</li>
     <li><strong>Statistics and achievements:</strong> counts such as how many photos you have reviewed and how much space you have freed, along with badges and streaks.</li>
     <li><strong>Preferences:</strong> settings such as whether you have completed the introduction and how lists are displayed.</li>
-    <li><strong>Daily free review count:</strong> for the free version, the number of reviews used today and the date. This is stored in the iOS Keychain on your device so the daily limit works as intended. It contains no personal information and is not synced to other devices.</li>
+    <li><strong>Daily free review count:</strong> to keep the free plan's daily limit fair, ApagApp stores in your device's Keychain the day's review count and date, scrambled (hashed) identifiers of the photos reviewed that day, your time zone and an identifier of the current device start-up. It stays on this device only, is not synced to other devices and is never sent anywhere.</li>
+    <li><strong>Purchase status and encryption key:</strong> your last known plan, so paid features don't disappear before Apple's StoreKit answers, and a reference to the key used to encrypt saved reviews. Both are kept in the Keychain on this device only.</li>
   </ul>
-  <p>Deleting ApagApp removes this information, except for the daily review count in the Keychain, which iOS may keep after the app is removed. Some of this information may be included in your device backups (iCloud Backup or a computer backup), depending on your iOS settings. Restoring a purchase does not restore this local information on a new device.</p>
+  <p>Deleting ApagApp removes this information, except for the items kept in the Keychain (the daily review count, the last known purchase status and the encryption key reference), which iOS may keep on this device after the app is removed. Some of this information may be included in your device backups (iCloud Backup or a computer backup), depending on your iOS settings. Restoring a purchase does not restore this local information on a new device.</p>
 
   <h2>3. Purchases and subscriptions</h2>
   <p>ApagApp offers optional paid plans through Apple's In-App Purchase system. Apple processes all payments and handles your Apple Account, billing details and purchase history. We never receive your name, email address, payment card or billing address.</p>
